@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <h2>To Do App</h2>
+</head>
+
+<body>
+    Enter Task: <input type="text" id="newtext">
+    <input type="button" onclick="newTask()" name="submit" value="Submit">
+    <div id="nav">
+        <ul id="todoList">
+        </ul>
+    </div>
+
+    <script>
+        function newTask() {
+            var i = 1;
+            var input = document.getElementById('newtext').value;
+            if (input === '') {
+                alert('Empty!!');
+            }
+            else if (input !== '') {
+
+                document.getElementById('newtext').value = '';
+                var li = document.createElement("li");
+                li.id = i;
+
+                var check = document.createElement("input");
+                check.type = "checkbox";
+                check.value = "done";
+                check.id = "done";
+                var but = document.createElement("input");
+                but.type = "button";
+                but.value = "Delete";
+                var t = document.createTextNode(input);
+                li.appendChild(t);
+                li.appendChild(but);
+
+                document.getElementById('todoList').appendChild(li)
+                    .appendChild(check);
+                but.addEventListener("click", function (e) {
+                    var x = e.target.parentNode;
+                    if (confirm("Are You sure you have completed")) {
+
+                        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+                    }
+                    else {
+
+                    }
+
+                })
+                check.addEventListener("click", function (e) {
+                    if (e.target.checked) {
+                        e.target.parentElement.style.textDecoration = "Line-through";
+                    }
+                    if (!e.target.checked) {
+                        e.target.parentElement.style.textDecoration = "";
+                    }
+
+                })
+
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
