@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO APP MVC</title>
+    <script src="mvc.js"></script>
+
+
+
+    <link rel="stylesheet" href="mvc.css">
+
+</head>
+
+<body>
+    <div class="todoapp">
+
+        <h1>todos</h1>
+
+        <form id="myform">
+            <input class="new-todo" type="text" id="input" placeholder="What to do you want to do?"></input>
+
+            <div class="main" style="display: block">
+
+                <input class="toggle-all" type="checkbox">
+                </input>
+                <label for="toggle-all">Mark all as complete</label>
+
+
+
+
+                <ul class="todo-list" id=todoList>
+                    <li class>
+                        <div class="view">
+
+
+                        </div>
+                    </li>
+                </ul>
+        </form>
+
+
+        </div>
+        <div class="footer">
+            <span class="todo-count">
+                <strong>0</strong>
+                " items left"
+            </span>
+            <ul class="filters">
+                <li>
+                    <a href="#/" class="selected">All</a>
+                </li>
+                <li>
+                    <a href="#/active">Active</a>
+                </li>
+                <li>
+                    <a href="#/completed">Completed</a>
+                </li>
+            </ul>
+            <button class="clear-completed">Clear completed</button>
+        </div>
+    </div>
+    <div class="info">
+        <p>Made with <span style="font-size:130%;"> &hearts; </span> by Prameet Chakraborty </p>
+    </div>
+</body>
+
+</html>
